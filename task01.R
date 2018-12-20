@@ -4,7 +4,7 @@ source("util.R")
 
 #### Prepare data (female anaconda weight)
 dat <- read.table("./Data/anaconda.dat", h = T, sep = "\t")
-y   <- dataset$weight[dataset$gender == "F"]
+y   <- dat$weight[dat$gender == "F"]
 
 #### Plot data
 plot(y, rep(0, length(y)), xlab = "weight", ylab = "")
