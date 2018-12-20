@@ -15,7 +15,7 @@ title("blue line is sample average, red line is at 30 kg")
 #### Run model
 stan_data <- list(y = y, n = length(y))
 fit <- load_or_compile(model_name = "task01", force_compile = F)
-res <- stan(fit = fit, data = stan_data, chains = 3)
+res <- sampling(fit = fit, data = stan_data, chains = 3)
 
 #### Analyze results (assumes the mean parameter is named "mean_weight")
 param_name <- "mean_weight"
